@@ -7,8 +7,6 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-import Header from "../../components/Header";
-import { colors } from "../../utils";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
 const Information = ({ navigation }) => {
@@ -24,7 +22,8 @@ const Information = ({ navigation }) => {
           style={styles.imageWrapper}
         />
       </TouchableOpacity>
-      <View>
+      <View style={{ justifyContent: "space-between", flex: 1 }}>
+        {/* deskripsi */}
         <View>
           <Text style={styles.desc}>
             This is a application for users who want to pour out all their
@@ -32,36 +31,22 @@ const Information = ({ navigation }) => {
             anonymous so there is no need to worry that your personal data will
             not be known by anyone
           </Text>
-          <View
-            style={{
-              height: 10,
-              borderTopWidth: 3,
-              width: 100,
-              alignSelf: "center",
-              marginTop: 15,
-              borderTopColor: "purple",
-            }}
-          ></View>
-          <Text
-            style={{
-              alignSelf: "center",
-              textAlign: "center",
-              fontSize: 20,
-              color: "purple",
-              marginTop: 25,
-            }}
-          >
-            IF YOU HAVE ANY SUGGESTION {"\n"}
-            CONTACT US ON EMAIL{" "}
-          </Text>
-          <TouchableOpacity style={styles.button}>
-            <Icon name="email" size={20} />
-          </TouchableOpacity>
+          <View style={styles.underline}></View>
+
+          {/* contact */}
+          <View>
+            <Text style={styles.contact}>
+              IF YOU HAVE ANY SUGGESTION {"\n"}
+              CONTACT US ON EMAIL{" "}
+            </Text>
+            <TouchableOpacity style={styles.button}>
+              <Icon name="email" size={35} />
+            </TouchableOpacity>
+          </View>
         </View>
-        <View style={{ marginTop: 200 }}>
-          <Text
-            style={{ textAlign: "center", color: "purple", fontWeight: "bold" }}
-          >
+        {/* copyright */}
+        <View style={{ bottom: 100 }}>
+          <Text style={styles.copyright}>
             THIS APPLICATION IS PRODUCED AND PUBLISHED BY {"\n"}
             Wanna Be Start
           </Text>
@@ -89,11 +74,26 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     textAlign: "center",
     fontSize: 18,
-    color: "purple",
-    marginTop: 20,
+    color: "#B04DBF",
+    marginTop: 25,
+  },
+  underline: {
+    height: 10,
+    borderTopWidth: 3,
+    width: 100,
+    alignSelf: "center",
+    marginTop: 15,
+    borderTopColor: "#B04DBF",
+  },
+  contact: {
+    alignSelf: "center",
+    textAlign: "center",
+    fontSize: 20,
+    color: "#B04DBF",
+    marginTop: 25,
   },
   button: {
-    backgroundColor: "purple",
+    backgroundColor: "#B04DBF",
     paddingHorizontal: 12,
     paddingVertical: 11,
     borderRadius: 4,
@@ -101,5 +101,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 20,
     marginHorizontal: 35,
+  },
+  copyright: {
+    textAlign: "center",
+    color: "#B04DBF",
+    fontWeight: "bold",
+    marginTop: 20,
   },
 });
