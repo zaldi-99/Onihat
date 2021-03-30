@@ -9,42 +9,6 @@ import {
 } from "react-native";
 import Header from "../../components/Header";
 
-// const Post = () => {
-//   return (
-//     <View style={styles.container}>
-//       <StatusBar barStyle="default" />
-//       <Header />
-//       <Text>Post Screen</Text>
-//     </View>
-//   );
-// };
-
-// const Post = ({ navigation }) => {
-//   const request = new Request(
-//     "https://api-mading.wannabestart.com/public/api/mading",
-//     {
-//       method: "POST",
-//       headers: {
-//         Accept: "application/json",
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({
-//         firstParam: "dear",
-//         secondParam: "negatif_post",
-//       }),
-//     }
-//   );
-//   return (
-//     <View style={styles.container}>
-//       <StatusBar barStyle="default" />
-//       <Header onPress={() => navigation.navigate("Information")} />
-//       <Text style={{ color: "white" }}>Post Screen</Text>
-//     </View>
-//   );
-// };
-
-// export default Post;
-
 export default class Post extends React.Component {
   constructor(props) {
     super(props);
